@@ -6,6 +6,12 @@
 
 > 原则：**会计口径准确性 > 来源可追溯 > 因果解释 > 图形可读性 > 交互装饰**。所有演示数据均为合成数据，不应被当作上市公司真实披露。
 
+## 在线演示 · GitHub Pages
+
+**[打开完整的 16 种财报分析图表交互图鉴](https://1998x-stack.github.io/Financial-Visualization/)**
+
+该站点直接基于 `financial_charts_16_HTML_SVG.zip` 发布，包含 16 个独立 HTML 页面、16 个 SVG、CSV 和总览画廊。所有数值均为**模拟教学数据**。发布源和自动化 QA 位于 [`site/`](site/) 及 [Pages workflow](.github/workflows/pages.yml)，与本仓库的 SKILL 示例分开维护。
+
 ## 入口
 
 - [SKILL.md](skills/financial-visualization/SKILL.md)：可给 Agent 使用的完整执行规范
