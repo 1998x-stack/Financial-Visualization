@@ -71,6 +71,8 @@ python -m unittest discover -s tests -v
 python skills/financial-visualization/scripts/browser_check.py examples/demo/index.html --out reports/demo
 ```
 
+To extract all standalone SVGs run `python skills/financial-visualization/scripts/export_gallery_svgs.py examples/demo/index.html --out reports/demo/svg`.
+
 Browser check requires the optional `playwright` package and Chromium installed. Static checks alone never establish successful browser QA.
 
 ## Reference routing
