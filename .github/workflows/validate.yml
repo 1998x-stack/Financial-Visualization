@@ -6,7 +6,7 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
@@ -20,10 +20,12 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Install Chromium browser QA dependencies
         run: |
-          python -m pip install playwright==1.56.0
+          python -m pip install playwright==1.65.2
           python -m playwright install --with-deps chromium
       - name: Real browser smoke tests (offline, export, 4 widths)
         run: python skills/financial-visualization/scripts/browser_check.py examples/demo/index.html --out reports/demo
+      - name: Export all 15 standalone SVGs
+        run: python skills/financial-visualization/scripts/export_gallery_svgs.py examples/demo/index.html --out reports/demo/svg
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -32,7 +34,7 @@ jobs:
           if-no-files-found: ignore
 
   adapters:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
