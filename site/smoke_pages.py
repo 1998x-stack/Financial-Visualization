@@ -30,7 +30,7 @@ def main(root):
                 assert page.locator("text=模拟数据").count() > 0
                 if w == 1440:
                     with page.expect_download() as d:
-                        page.locator('[data-export="04"]').first.click()
+                        page.locator('[data-export="4"]').first.click()
                     assert d.value.suggested_filename.lower().endswith(".svg")
                     for i, stem in enumerate(STEMS, 1):
                         page.goto((root/f"{i:02d}-{stem}.html").as_uri())
@@ -40,7 +40,7 @@ def main(root):
                     assert page.locator("#fin-table tbody tr:visible").count() == 1
                     page.locator("#search-fin").fill("")
                     with page.expect_download() as csv:
-                        page.locator("#download-csv").click()
+                        page.locator("#csv-fin").click()
                     assert csv.value.suggested_filename.endswith(".csv")
                 print(f"PASS: {w}x{h} offline gallery, 16 SVGs, JS errors: {len(errors)}")
                 ctx.close()
