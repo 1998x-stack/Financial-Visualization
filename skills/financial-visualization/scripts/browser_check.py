@@ -35,8 +35,8 @@ def run(html, out_dir):
                 count = page.locator(".chart-stage svg").count()
                 assert count == 15, f"{width}px: expected 15 SVG charts, found {count}"
                 assert page.locator("#financial-table tbody tr").count() >= 10
-                titles = page.locator(".chart-stage svg title").count()
-                descs = page.locator(".chart-stage svg desc").count()
+                titles = page.locator(".chart-stage svg > title").count()
+                descs = page.locator(".chart-stage svg > desc").count()
                 assert titles == descs == 15, f"{width}px: SVG accessibility labels missing"
                 overflow = page.evaluate(
                     "() => document.documentElement.scrollWidth - window.innerWidth")
