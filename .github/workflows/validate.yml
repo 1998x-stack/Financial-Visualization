@@ -30,3 +30,19 @@ jobs:
           name: financial-visualization-browser-qa
           path: reports/demo
           if-no-files-found: ignore
+
+  adapters:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install exact direct JS dependencies
+        working-directory: examples/echarts-d3
+        run: npm install --no-audit --no-fund
+      - name: Build ECharts 6 + D3 Sankey Vite bundle
+        working-directory: examples/echarts-d3
+        run: npm run build
