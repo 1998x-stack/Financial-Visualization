@@ -1,0 +1,32 @@
+name: Financial Visualization Validate
+on:
+  push:
+    branches: [main, "feat/**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate synthetic fixture and accounting identities
+        run: python skills/financial-visualization/scripts/validate_financials.py examples/demo/financials.json
+      - name: Python unit and structure tests
+        run: python -m unittest discover -s tests -v
+      - name: Install Chromium browser QA dependencies
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Real browser smoke tests (offline, export, 4 widths)
+        run: python skills/financial-visualization/scripts/browser_check.py examples/demo/index.html --out reports/demo
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: financial-visualization-browser-qa
+          path: reports/demo
+          if-no-files-found: ignore
