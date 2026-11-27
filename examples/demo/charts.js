@@ -48,7 +48,7 @@
   function svg(section,title,description){
     const stage=section.querySelector(".chart-stage");
     const g=el(stage,"svg",{xmlns:NS,viewBox:"0 0 "+W+" "+H,
-      role:"img","aria-labelledby":section.id+"-title "+section.id+"-desc"});
+      role:"img","font-family":'system-ui,Microsoft YaHei,Arial,sans-serif',"aria-labelledby":section.id+"-title "+section.id+"-desc"});
     el(g,"title",{id:section.id+"-title"},title);
     el(g,"desc",{id:section.id+"-desc"},description);
     rect(g,0,0,W,H,C.white);
@@ -308,6 +308,7 @@
     try{
       const figure=svg(section,section.dataset.title,section.dataset.description);
       fn(figure);
+      text(figure, W-16, H-7, "合成演示数据 · 不代表真实财报", {anchor:"end",size:10,color:C.muted});
     }catch(err){reportErrors.push(id+": "+err.message);}
   });
   if(reportErrors.length) throw new Error("Chart render errors: "+reportErrors.join("; "));
