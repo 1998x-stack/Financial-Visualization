@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>16 种财报可视化 · Financial Visualization</title>
+<meta name="description" content="可离线打开的财务图表图鉴，含 SVG、利润桥和可核验原始表格。模拟数据。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳过导航，进入正文</a>
+<div class="layout">
+<aside class="sidebar"><div class="brand">FINANCIAL<br><strong>VISUALIZATION</strong></div>
+<p class="sidebar-text">财报可视化图鉴<br>16 种常见图表</p>
+<nav aria-label="16 种图表目录"><a href="#chart-01">01 分组柱状图</a>
+<a href="#chart-02">02 折线图</a>
+<a href="#chart-03">03 柱线组合图</a>
+<a href="#chart-04">04 利润瀑布图</a>
+<a href="#chart-05">05 堆叠柱状图</a>
+<a href="#chart-06">06 桑基图</a>
+<a href="#chart-07">07 堆叠面积图</a>
+<a href="#chart-08">08 矩形树图</a>
+<a href="#chart-09">09 环形图</a>
+<a href="#chart-10">10 气泡散点图</a>
+<a href="#chart-11">11 热力图</a>
+<a href="#chart-12">12 雷达图</a>
+<a href="#chart-13">13 子弹图</a>
+<a href="#chart-14">14 指数化走势图</a>
+<a href="#chart-15">15 估值区间图</a>
+<a href="#chart-16">16 财务明细表</a></nav>
+</aside>
+<main id="main"><article>
+<header class="hero"><p class="eyebrow">DATA STORYTELLING / FINANCIAL REPORTS</p>
+<h1>用图表读懂财报</h1>
+<p class="dek">从增长、利润结构、业务分部到估值，把财务数字变成可理解、可核对的研究视图。</p>
+<p class="notice"><strong>演示数据声明：</strong>本文全部数字、同行样本、目标和估值区间均为人为合成，不代表任何上市公司或实际市场报价。</p>
+</header>
+<section class="summary" aria-labelledby="summary-title">
+<h2 id="summary-title">从三个数字开始</h2>
+<div class="kpis"><div><span>2025 营业收入</span><strong>104</strong><small>亿元 · +18.2% YoY</small></div>
+<div><span>2025 毛利润</span><strong>54</strong><small>亿元 · 毛利率 51.9%</small></div>
+<div><span>2025 净利润</span><strong>20</strong><small>亿元 · 净利率 19.2%</small></div></div>
+<p>这三个数字回答规模、直接盈利和最终利润的问题；其余图形分别揭示业务驱动、盈利路径和跨期变化。结尾保留全部数值表以供核对。</p>
+</section>
+<section class="chart-card" id="chart-01" data-title="分组柱状图" data-description="营收、毛利润、净利润如何变化？ 五年同口径金额的横向比较。">
+  <div class="card-head"><div><span class="number">01 / 16</span><h2>分组柱状图</h2><p class="question">营收、毛利润、净利润如何变化？</p></div><button type="button" class="export-svg" aria-label="导出分组柱状图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="分组柱状图图表"></div><figcaption>五年同口径金额的横向比较。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-02" data-title="折线图" data-description="盈利能力是否持续改善？ 毛利率、净利率以及示例 ROE 按年观察。">
+  <div class="card-head"><div><span class="number">02 / 16</span><h2>折线图</h2><p class="question">盈利能力是否持续改善？</p></div><button type="button" class="export-svg" aria-label="导出折线图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="折线图图表"></div><figcaption>毛利率、净利率以及示例 ROE 按年观察。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-03" data-title="柱线组合图" data-description="规模增长和同比增长是否同向？ 双轴各自标明亿元与百分比。">
+  <div class="card-head"><div><span class="number">03 / 16</span><h2>柱线组合图</h2><p class="question">规模增长和同比增长是否同向？</p></div><button type="button" class="export-svg" aria-label="导出柱线组合图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="柱线组合图图表"></div><figcaption>双轴各自标明亿元与百分比。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-04" data-title="利润瀑布图" data-description="104 亿元的收入如何桥接到 20 亿元净利润？ 成本与费用逐项扣减；其他净支出不是税费。">
+  <div class="card-head"><div><span class="number">04 / 16</span><h2>利润瀑布图</h2><p class="question">104 亿元的收入如何桥接到 20 亿元净利润？</p></div><button type="button" class="export-svg" aria-label="导出利润瀑布图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="利润瀑布图图表"></div><figcaption>成本与费用逐项扣减；其他净支出不是税费。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-05" data-title="堆叠柱状图" data-description="哪项业务带来了收入？ 所有模拟业务分部之和必须等于合并收入。">
+  <div class="card-head"><div><span class="number">05 / 16</span><h2>堆叠柱状图</h2><p class="question">哪项业务带来了收入？</p></div><button type="button" class="export-svg" aria-label="导出堆叠柱状图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="堆叠柱状图图表"></div><figcaption>所有模拟业务分部之和必须等于合并收入。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-06" data-title="桑基图" data-description="毛利润最终分配到了哪里？ 所有来源、去向守恒。此图不是现金流量图。">
+  <div class="card-head"><div><span class="number">06 / 16</span><h2>桑基图</h2><p class="question">毛利润最终分配到了哪里？</p></div><button type="button" class="export-svg" aria-label="导出桑基图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="桑基图图表"></div><figcaption>所有来源、去向守恒。此图不是现金流量图。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-07" data-title="堆叠面积图" data-description="业务结构发生了怎样的变化？ 业务金额和累计面积同步展示。">
+  <div class="card-head"><div><span class="number">07 / 16</span><h2>堆叠面积图</h2><p class="question">业务结构发生了怎样的变化？</p></div><button type="button" class="export-svg" aria-label="导出堆叠面积图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="堆叠面积图图表"></div><figcaption>业务金额和累计面积同步展示。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-08" data-title="矩形树图" data-description="2025 年收入结构谁占主导？ 面积按非负金额成比例绘制。">
+  <div class="card-head"><div><span class="number">08 / 16</span><h2>矩形树图</h2><p class="question">2025 年收入结构谁占主导？</p></div><button type="button" class="export-svg" aria-label="导出矩形树图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="矩形树图图表"></div><figcaption>面积按非负金额成比例绘制。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-09" data-title="环形图" data-description="2025 年四大分部的占比？ 补充精确占比数字，而非依赖角度估读。">
+  <div class="card-head"><div><span class="number">09 / 16</span><h2>环形图</h2><p class="question">2025 年四大分部的占比？</p></div><button type="button" class="export-svg" aria-label="导出环形图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="环形图图表"></div><figcaption>补充精确占比数字，而非依赖角度估读。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-10" data-title="气泡散点图" data-description="同行增长、回报与规模如何比较？ 四家完全虚构的企业，展示三变量编码。">
+  <div class="card-head"><div><span class="number">10 / 16</span><h2>气泡散点图</h2><p class="question">同行增长、回报与规模如何比较？</p></div><button type="button" class="export-svg" aria-label="导出气泡散点图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="气泡散点图图表"></div><figcaption>四家完全虚构的企业，展示三变量编码。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-11" data-title="热力图" data-description="哪些业务增长较快？ 色阶与百分比数值并存；2022–2025 同比。">
+  <div class="card-head"><div><span class="number">11 / 16</span><h2>热力图</h2><p class="question">哪些业务增长较快？</p></div><button type="button" class="export-svg" aria-label="导出热力图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="热力图图表"></div><figcaption>色阶与百分比数值并存；2022–2025 同比。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-12" data-title="雷达图" data-description="综合指标的形态如何？ 轴上为归一化演示评分，不是实测财务比率。">
+  <div class="card-head"><div><span class="number">12 / 16</span><h2>雷达图</h2><p class="question">综合指标的形态如何？</p></div><button type="button" class="export-svg" aria-label="导出雷达图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="雷达图图表"></div><figcaption>轴上为归一化演示评分，不是实测财务比率。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-13" data-title="子弹图" data-description="实际表现是否超过目标？ 红线为人为假设的目标，不代表管理层指引。">
+  <div class="card-head"><div><span class="number">13 / 16</span><h2>子弹图</h2><p class="question">实际表现是否超过目标？</p></div><button type="button" class="export-svg" aria-label="导出子弹图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="子弹图图表"></div><figcaption>红线为人为假设的目标，不代表管理层指引。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-14" data-title="指数化走势图" data-description="哪项指标自基期增长最快？ 2021 年设为 100，比较相对变化。">
+  <div class="card-head"><div><span class="number">14 / 16</span><h2>指数化走势图</h2><p class="question">哪项指标自基期增长最快？</p></div><button type="button" class="export-svg" aria-label="导出指数化走势图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="指数化走势图图表"></div><figcaption>2021 年设为 100，比较相对变化。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-15" data-title="估值区间图" data-description="模拟 PE(TTM) 位于何种参考区间？ 仅演示历史估值带，不存在真实市场报价。">
+  <div class="card-head"><div><span class="number">15 / 16</span><h2>估值区间图</h2><p class="question">模拟 PE(TTM) 位于何种参考区间？</p></div><button type="button" class="export-svg" aria-label="导出估值区间图为 SVG">导出 SVG</button></div>
+  <figure><div class="chart-stage" aria-label="估值区间图图表"></div><figcaption>仅演示历史估值带，不存在真实市场报价。 所有数字为合成示例（单位除特别标注外为亿元）。</figcaption></figure>
+</section>
+<section class="chart-card" id="chart-16">
+<div class="card-head"><div><span class="number">16 / 16</span><h2>财务明细表</h2><p class="question">图表背后的数字到底是多少？</p></div>
+<button type="button" id="export-csv">导出 CSV</button></div>
+<p class="table-note">合成数据 · 单位：亿元 · FY 完整会计年度。点击列头不能改变口径；搜索可以筛选指标名称。</p>
+<label class="filter-label" for="table-filter">搜索指标</label><input type="search" id="table-filter" placeholder="如：净利润、游戏、现金流">
+<div class="table-scroll"><table id="financial-table"><caption>模拟合并财务指标（2021–2025）</caption><thead><tr><th scope="col">项目</th><th scope="col">2021</th><th scope="col">2022</th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th></tr></thead><tbody><tr><th scope="row">营业收入</th><td data-value="50">50</td><td data-value="62">62</td><td data-value="75">75</td><td data-value="88">88</td><td data-value="104">104</td></tr>
+<tr><th scope="row">营业成本</th><td data-value="30">30</td><td data-value="36">36</td><td data-value="41">41</td><td data-value="46">46</td><td data-value="50">50</td></tr>
+<tr><th scope="row">毛利润</th><td data-value="20">20</td><td data-value="26">26</td><td data-value="34">34</td><td data-value="42">42</td><td data-value="54">54</td></tr>
+<tr><th scope="row">净利润</th><td data-value="6">6</td><td data-value="8">8</td><td data-value="11">11</td><td data-value="15">15</td><td data-value="20">20</td></tr>
+<tr><th scope="row">经营现金流</th><td data-value="7">7</td><td data-value="9">9</td><td data-value="13">13</td><td data-value="18">18</td><td data-value="25">25</td></tr>
+<tr><th scope="row">游戏收入</th><td data-value="30">30</td><td data-value="36">36</td><td data-value="42">42</td><td data-value="47">47</td><td data-value="54">54</td></tr>
+<tr><th scope="row">平台收入</th><td data-value="12">12</td><td data-value="16">16</td><td data-value="21">21</td><td data-value="27">27</td><td data-value="34">34</td></tr>
+<tr><th scope="row">广告收入</th><td data-value="5">5</td><td data-value="6">6</td><td data-value="7">7</td><td data-value="8">8</td><td data-value="9">9</td></tr>
+<tr><th scope="row">其他收入</th><td data-value="3">3</td><td data-value="4">4</td><td data-value="5">5</td><td data-value="6">6</td><td data-value="7">7</td></tr>
+<tr><th scope="row">研发费用</th><td data-value="7">7</td><td data-value="9">9</td><td data-value="11">11</td><td data-value="13">13</td><td data-value="16">16</td></tr>
+<tr><th scope="row">销售费用</th><td data-value="4">4</td><td data-value="5">5</td><td data-value="6">6</td><td data-value="8">8</td><td data-value="10">10</td></tr>
+<tr><th scope="row">管理费用</th><td data-value="2">2</td><td data-value="3">3</td><td data-value="4">4</td><td data-value="4.5">4.5</td><td data-value="5">5</td></tr>
+<tr><th scope="row">其他净支出</th><td data-value="1">1</td><td data-value="1">1</td><td data-value="2">2</td><td data-value="1.5">1.5</td><td data-value="3">3</td></tr></tbody></table></div>
+<p class="footnote">会计恒等校验：2025 年收入 104 − 成本 50 = 毛利 54；104 − 50 − 16 − 10 − 5 − 3 = 净利润 20。其他净支出为教学上的净额分类。</p>
+</section>
+<footer><h2>关于数据与方法</h2><p>本页是可复现的教学样板，不构成研究结论或投资建议。真实财报应提供每一数据点的财报页码、报告口径、期间、币种及来源链接。</p></footer>
+</article></main></div>
+<script src="financials.js"></script><script src="charts.js"></script>
+<script>
+(function(){
+  const filter=document.querySelector("#table-filter");
+  filter.addEventListener("input",()=>{
+    const q=filter.value.trim().toLowerCase();
+    document.querySelectorAll("#financial-table tbody tr").forEach(tr=>{
+      tr.hidden=!tr.cells[0].textContent.toLowerCase().includes(q);
+    });
+  });
+  document.querySelector("#export-csv").addEventListener("click",()=>{
+    const table=document.querySelector("#financial-table");
+    const data=Array.from(table.querySelectorAll("tr")).map(tr=>Array.from(tr.cells).map(
+      td=>'"'+td.textContent.trim().replaceAll('"','""')+'"').join(",")).join("\r\n");
+    const blob=new Blob(["\ufeff"+data],{type:"text/csv;charset=utf-8"});
+    const u=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=u;a.download="financials-synthetic.csv";document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(u),1500);
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECharts 6 + D3 Sankey · Financial Visualization</title>
+<style>
+body{font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif;background:#f6f8fb;color:#243247;margin:0}
+main{max-width:1060px;padding:36px 18px;margin:auto}
+h1{font-size:32px}p{color:#53677d}
+section{background:white;padding:20px;margin:18px 0;border-radius:12px;border:1px solid #dce5ee}
+#echarts,#sankey{width:100%;height:390px}#sankey{height:auto;display:block}
+figcaption{color:#64748b;font-size:13px}figure{margin:0}
+@media print{body{background:white}section{break-inside:avoid}}
+</style></head>
+<body><main><h1>增长 → 盈利路径</h1>
+<p><strong>模拟数据：</strong>全部数值仅用于验证 ECharts SVG Renderer 与 D3-Sankey 的实际集成，绝非公司披露或真实市场数据。</p>
+<section><h2>年度营业收入与净利润</h2><figure><div id="echarts" aria-label="营业收入、净利润年度趋势"></div><figcaption>单位：亿元。ECharts SVG renderer；鼠标悬停显示准确值。</figcaption></figure></section>
+<section><h2>2025 年利润桥：桑基图</h2><figure><svg id="sankey" viewBox="0 0 900 430" role="img" aria-labelledby="sankey-title sankey-desc">
+<title id="sankey-title">2025 年模拟利润流向</title><desc id="sankey-desc">收入104分为营业成本50和毛利润54；毛利润进一步流向费用34和净利润20。</desc></svg>
+<figcaption>单位：亿元。D3-Sankey 布局、原生 SVG 输出。桑基图为利润分解，不是现金流量图。</figcaption></figure></section>
+<section><h2>核验结果</h2><p>2025：收入 104 − 成本 50 = 毛利 54；54 − 研发 16 − 销售 10 − 管理 5 − 其他净支出 3 = 净利润 20。</p></section>
+</main><script type="module" src="/main.js"></script></body></html>
