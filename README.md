@@ -15,12 +15,13 @@
 - [叙事与信息设计](skills/financial-visualization/references/storytelling.md)
 - [浏览器与导出 QA](skills/financial-visualization/references/qa-and-publishing.md)
 - [可运行示例](examples/demo/index.html) 与 [示例数据](examples/demo/financials.json)
-- [财务校验器](skills/financial-visualization/scripts/validate_financials.py)
+- [财务校验器](skills/financial-visualization/scripts/validate_financials.py) 与 [全量 SVG 导出脚本](skills/financial-visualization/scripts/export_gallery_svgs.py)
 
 ## 快速开始
 
 ```bash
 python skills/financial-visualization/scripts/validate_financials.py examples/demo/financials.json
+python skills/financial-visualization/scripts/export_gallery_svgs.py examples/demo/index.html --out /tmp/financial-svg
 python -m http.server 8000
 # 浏览器打开 http://localhost:8000/examples/demo/
 ```
