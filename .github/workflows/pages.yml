@@ -1,0 +1,62 @@
+name: Publish 16 Financial Charts to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: financial-visualization-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Restore the original ZIP-based site snapshot
+        run: |
+          mkdir -p _site
+          base64 --decode site/financial_charts_16.snapshot.tar.xz.b64 > /tmp/financial-atlas.tar.xz
+          echo "9a38464add29156a3211a713c8ae24a224acc851171a65238693bdede23912f0  /tmp/financial-atlas.tar.xz" | sha256sum -c -
+          tar -xJf /tmp/financial-atlas.tar.xz -C _site
+          touch _site/.nojekyll
+      - name: Check HTML pages, SVG integrity, linked assets, and numerical disclaimer
+        run: python site/verify_gallery.py _site
+      - name: Install browser QA
+        run: |
+          python -m pip install playwright==1.65.2
+          python -m playwright install --with-deps chromium
+      - name: Test gallery, all 16 charts and HTML table in Chromium
+        run: python site/smoke_pages.py _site
+      - name: Archive built website for manual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: financial-charts-16-website
+          path: _site/
+          if-no-files-found: error
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
