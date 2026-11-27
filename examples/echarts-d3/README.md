@@ -1,12 +1,14 @@
 # Optional production adapter: ECharts + D3
 
+Requires Node.js 22.12+ (or 20.19+).
+
 This is an actual **ECharts 6 SVG renderer** + **D3-Sankey** integration. Unlike \`examples/demo/\`, it requires a package install/build step.
 
 \`\`\`bash
 cd examples/echarts-d3
 npm install --no-audit --no-fund
 npm run dev    # open local Vite URL
-npm run build  # static deployment bundle in dist/
+npm run build  # Vite 8; static deployment bundle in dist/, relative paths
 \`\`\`
 
 The dependency versions are explicit in \`package.json\`. For lockfile-reproducible production deployment, **commit the generated package-lock.json** and replace \`npm install\` with \`npm ci\`.
